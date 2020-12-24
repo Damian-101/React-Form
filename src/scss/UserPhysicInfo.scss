@@ -1,0 +1,32 @@
+@import "./common.scss";
+.UserPhysicInfo {
+    height: 100vh;
+    padding-top: 9.5rem;
+    header {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        color: #fff;
+        p {
+            padding-top: 1rem;
+        }
+    }
+    footer {
+        padding-top: 1.5rem;
+        ul {
+            list-style-type: none;
+            li {
+                padding: 2rem 0;
+                p {
+                    color: #fff;
+                }
+                div {
+                    font-weight: $SegoeSemiBold;
+                }
+                div {
+                    padding-top: 0.6rem;
+                }
+            }
+        }
+    }
+}

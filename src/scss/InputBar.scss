@@ -1,0 +1,50 @@
+@import "./common.scss";
+.InputBar {
+    .input {
+        width: 240px;
+        height: 55px;
+        border: none;
+        border-radius: 17rem;
+        box-shadow: 0px 6px 9px 6px rgba(0, 0, 0, 0.07);
+        font-size: $mediumText;
+        color: #000;
+        box-sizing: border-box;
+        outline: none;
+        text-align: center;
+        &::placeholder {
+            opacity: 50%;
+        }
+    }
+}
+
+// @media only screen and (max-height:568px) {
+//     .input {
+//        font-size: 40%
+//    }
+// }
+@media only screen and (max-height:600px) {
+    .InputBar {
+        .input {
+            width: 200px;
+            height: 50px
+        }
+    }
+}
+
+@media only screen and (min-height:1000px) {
+    .InputBar {
+        .input {
+            width: 300px;
+            height: 80px
+        }
+    }
+}
+
+@media only screen and (min-height:1200px) {
+    .InputBar {
+        .input {
+            width: 300px;
+            height: 90px
+        }
+    }
+}

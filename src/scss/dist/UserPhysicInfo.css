@@ -1,0 +1,66 @@
+h1 {
+  font-size: 4.7rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  margin: 0 4.5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.err {
+  color: red;
+  padding-top: 1rem;
+}
+
+.page-wraper {
+  background-color: #14153D;
+}
+
+.UserPhysicInfo {
+  height: 100vh;
+  padding-top: 9.5rem;
+}
+.UserPhysicInfo header {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  color: #fff;
+}
+.UserPhysicInfo header p {
+  padding-top: 1rem;
+}
+.UserPhysicInfo footer {
+  padding-top: 1.5rem;
+}
+.UserPhysicInfo footer ul {
+  list-style-type: none;
+}
+.UserPhysicInfo footer ul li {
+  padding: 2rem 0;
+}
+.UserPhysicInfo footer ul li p {
+  color: #fff;
+}
+.UserPhysicInfo footer ul li div {
+  font-weight: 700;
+}
+.UserPhysicInfo footer ul li div {
+  padding-top: 0.6rem;
+}

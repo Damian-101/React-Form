@@ -1,0 +1,54 @@
+h1 {
+  font-size: 4.7rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-height: 568px) {
+  :root {
+    font-size: 40%;
+  }
+}
+@media only screen and (max-height: 600px) {
+  :root {
+    font-size: 42%;
+  }
+}
+@media only screen and (min-height: 1000px) {
+  :root {
+    font-size: 80%;
+  }
+}
+@media only screen and (min-height: 1200px) {
+  :root {
+    font-size: 120%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  margin: 0 4.5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.err {
+  color: red;
+  padding-top: 1rem;
+}
+
+.page-wraper {
+  background-color: #14153D;
+}
