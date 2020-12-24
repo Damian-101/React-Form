@@ -1,0 +1,108 @@
+h1 {
+  font-size: 4.7rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-height: 568px) {
+  :root {
+    font-size: 40%;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  :root {
+    font-size: 42%;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (min-height: 1200px) {
+  :root {
+    font-size: 120%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.container {
+  margin: 0 4.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.err {
+  color: red;
+  padding-top: 1rem;
+}
+
+.page-wraper {
+  background-color: #14153D;
+}
+
+.UserPhysicInfo {
+  height: 100vh;
+  padding-top: 9.5rem;
+}
+
+.UserPhysicInfo header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+}
+
+.UserPhysicInfo header p {
+  padding-top: 1rem;
+}
+
+.UserPhysicInfo footer {
+  padding-top: 1.5rem;
+}
+
+.UserPhysicInfo footer ul {
+  list-style-type: none;
+}
+
+.UserPhysicInfo footer ul li {
+  padding: 2rem 0;
+}
+
+.UserPhysicInfo footer ul li p {
+  color: #fff;
+}
+
+.UserPhysicInfo footer ul li div {
+  font-weight: 700;
+}
+
+.UserPhysicInfo footer ul li div {
+  padding-top: 0.6rem;
+}
+/*# sourceMappingURL=UserPhysicInfo.css.map */

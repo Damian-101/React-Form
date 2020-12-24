@@ -9,15 +9,20 @@ import React, {useState} from "react";
 import {useHistory} from "react-router-dom";
 import {Formik,Form,Field,useFormik} from "formik";
 import {SignupSchema} from "../components/SignupSchema";
+import {initialValues,validate} from "../components/UserData";
 
 const UserNamePage =() => {
+    const history = useHistory();
+
     const formik = useFormik({
-        initialValues:{
-            userName: "",
-            weight: "",
-        }
+        initialValues,
+        validate,
     })
 
+    const handleSubmit = () => {
+        console.log("clicked")
+        history.push("/UserPhysicInfo");
+    }
     console.log(formik.values)
         return (
             <div className="page-wraper">
@@ -27,7 +32,7 @@ const UserNamePage =() => {
                                 <h1>Hello There</h1>
                                     <form>
                                         <Form01 name="userName" placeholder="Type Your Name" changeHandler={formik.handleChange} value={formik.values.userName}/>
-                                        <SubmitBtn/>
+                                        <SubmitBtn handleSubmit={handleSubmit}/>
                                     </form>
                             </div>
                         </div>
