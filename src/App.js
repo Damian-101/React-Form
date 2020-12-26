@@ -11,7 +11,8 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect
 } from "react-router-dom";
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
         </Link>
           <Switch>
-            <Route path="/UserNamePage" exact component={UserNamePage}/>
+            <Route exact path="/" component={UserNamePage}/>
             <Route path="/UserPhysicInfo" component={UserPhysicInfo}/>
             <Route path="/MainPage" component={MainPage}/>
           </Switch>

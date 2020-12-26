@@ -5,15 +5,13 @@ import "../scss/SubmitBtn.scss";
 import React, {useState, useContext} from "react";
 import {Link} from "react-router-dom";
 import { useFormik } from "formik"
-import {onSubmit,initialValues} from "./UserData";
+import {initialValues,handleSubmit} from "./UserData";
 
  const SubmitBtn = (props) => {
 
     const formik = useFormik({
         initialValues,
-        onSubmit,
     })
-    
     let btnValidation = {
         opacity: "10%"
     }
@@ -23,13 +21,14 @@ import {onSubmit,initialValues} from "./UserData";
         }
     }
     return (
-            <div className="SubmitBtn" onClick={formik.handleSubmit} style={btnValidation} id="page">
+            <div className="SubmitBtn"
+             onClick={props.handleSubmit}
+             style={btnValidation} id="page">
                 <div className="SubmitIcon">
                     <FontAwesomeIcon icon={faArrowRight}/>
                 </div>
             </div>
     );
-
 }
 
 export default SubmitBtn;

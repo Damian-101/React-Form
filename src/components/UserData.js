@@ -11,7 +11,7 @@ export const initialValues = () => {
 }
 export const validationSchema = Yup.object({
     userName: Yup.string()
-        .min(2, "Too Short!")
+        .min(3, "Too Short!")
         .max(8, "Too Long!")
         .required("Required!"),
 
@@ -23,7 +23,3 @@ export const validationSchema = Yup.object({
         .max(3, "Invalid Characters")
         .matches(/\d/, "Invalid Characters"),
 });
-
-export const onSubmit = values => {
-    console.log(values)
-}

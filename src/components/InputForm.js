@@ -14,12 +14,11 @@ const Form01 =(props) => {
     const formik = useFormik({
         initialValues,
         validationSchema,
-        onSubmit
     })
     return(
         <div className="UserForm">
             <div className="InputBar">
-                <form onSubmit={props.handleSubmit}>
+                <form onSubmit={formik.handleSubmit}>
                 <input type="text"
                     name={props.name}
                     onChange={props.changeHandler}
