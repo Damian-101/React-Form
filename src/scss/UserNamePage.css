@@ -1,100 +1,102 @@
 h1 {
-  font-size: 4.7rem;
-  margin: 0;
-  font-weight: 700;
+    font-size: 4.7rem;
+    margin: 0;
+    font-weight: 700;
 }
 
 :root {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 @media only screen and (max-height: 568px) {
-  :root {
-    font-size: 40%;
-  }
+     :root {
+        font-size: 40%;
+    }
 }
 
 @media only screen and (max-height: 600px) {
-  :root {
-    font-size: 42%;
-  }
+     :root {
+        font-size: 42%;
+    }
 }
 
 @media only screen and (min-height: 1000px) {
-  :root {
-    font-size: 80%;
-  }
+     :root {
+        font-size: 80%;
+    }
 }
 
 @media only screen and (min-height: 1200px) {
-  :root {
-    font-size: 120%;
-  }
+     :root {
+        font-size: 120%;
+    }
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 p {
-  font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 .container {
-  margin: 0 4.5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: relative;
+    margin: 0 4.5rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.err {
-  color: red;
-  padding-top: 1rem;
+.error {
+    color: red;
+    padding-top: 1rem;
 }
 
 .page-wraper {
-  background-color: #14153D;
+    background-color: #14153D;
 }
 
 .UserNamePage {
-  height: 100vh;
-  position: relative;
-  max-width: 100%;
+    height: 100vh;
+    position: relative;
+    max-width: 100%;
 }
 
 .UserNamePage .center-wraper {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  padding-bottom: 5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    padding-bottom: 5rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .UserNamePage .center-wraper h1 {
-  padding-bottom: 2rem;
-  color: #FFF;
+    padding-bottom: 2rem;
+    color: #FFF;
 }
 
 .UserNamePage .center-wraper .err {
-  padding-top: 2.5rem;
-  font-size: 1.5rem;
-  color: red;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+    color: red;
 }
+
+
 /*# sourceMappingURL=UserNamePage.css.map */

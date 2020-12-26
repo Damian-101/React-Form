@@ -6,11 +6,20 @@ import * as yup from "yup";
 import SubmitBtn from "./SubmitBtn";
 import {BrowserRouter} from "react-router-dom";
 import UserNamePage from "../Pages/UserNamePage";
-
+import { Formik,useFormik } from "formik";
+import {initialValues,validationSchema,onSubmit} from "./UserData";
+ 
 const Form01 =(props) => {
+
+    const formik = useFormik({
+        initialValues,
+        validationSchema,
+        onSubmit
+    })
     return(
         <div className="UserForm">
             <div className="InputBar">
+                <form onSubmit={props.handleSubmit}>
                 <input type="text"
                     name={props.name}
                     onChange={props.changeHandler}
@@ -20,8 +29,9 @@ const Form01 =(props) => {
                     className="input"
                     href={props.href}
                     placeholder={props.placeholder}
-                    onClick = {props.pageValidation}
+                    onBlur = {props.handleBlur}
                 />
+                </form>
             </div>
         </div>
     );

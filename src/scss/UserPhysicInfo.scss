@@ -12,6 +12,8 @@
         }
     }
     footer {
+        width: 100%;
+        display: flex;
         padding-top: 1.5rem;
         ul {
             list-style-type: none;
@@ -20,10 +22,11 @@
                 p {
                     color: #fff;
                 }
-                div {
+                div:first-child {
                     font-weight: $SegoeSemiBold;
                 }
                 div {
+                    width: 100%;
                     padding-top: 0.6rem;
                 }
             }

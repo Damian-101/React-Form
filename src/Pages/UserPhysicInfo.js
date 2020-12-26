@@ -3,13 +3,19 @@ import "../scss/UserPhysicInfo.scss";
 import Form01 from "../components/InputForm";
 import SubmitBtn from "../components/SubmitBtn";
 import React, {useState,setState} from "react";
+import {initialValues,validationSchema,onSubmit} from "../components/UserData"
+import {Formik,useFormik} from "formik"
 
-let UserPhysicInfo = () =>{
+const UserPhysicInfo = () =>{
 
-    // validation  
+    const formik = useFormik({
+        initialValues,
+        validationSchema,
+        onSubmit
+    })
     return (
         <div className="page-wraper">
-            {/* <div className="container">
+            <div className="container">
                 <div className="UserPhysicInfo">
                     <header>
                         <h1>Hello User</h1>
@@ -19,27 +25,29 @@ let UserPhysicInfo = () =>{
                         <ul>
                             <li>
                                 <div><p>Your Age</p></div>
-                                <div>
-                                    <Form01 value={userAge} setValue={setUserHeight} placeholder="Ex: 20"/>
+                                <div className="InputWraper">
+                                    <Form01 name="userAge" value={formik.values.userName} handleBlur= {formik.handleBlur} changeHandler={formik.handleChange}  handleSubmit={formik.handleSubmit} placeholder="Ex: 20"/>
+                                    {formik.touched.userAge && formik.errors.userAge ? <div className="error">{formik.errors.userAge}</div> :null}
                                 </div>
                             </li>
                             <li>
                                 <div><p>Your Weight</p></div>
                                 <div>
-                                    <Form01 value={userWeight} setValue={setUserAge} placeholder="Ex: 140 lb"/>
+                                    <Form01 name="userWeight" values={formik.values.userWeight} handleBlur={formik.handleBlur} changeHandler={formik.handleChange} placeholder="Ex: 140 lb"/>
+                                    {formik.touched.userWeight && formik.errors.userWeight ? <div className="error">{formik.errors.userWeight}</div> :null}
                                 </div>
                             </li>
                             <li>
                                 <div><p>Your Height</p></div>
                                 <div>
-                                    <Form01 value={userHeight} setValue={setUserWeight} placeholder="Ex: 6.5 ft"/>
+                                    <Form01 name="userHeight" values={formik.values.userHeight} onBlur={formik.handleBlur} changeHandler={formik.handleChange} placeholder="Ex: 6.5 ft"/>
                                 </div>
                             </li>
                         </ul>
                     </footer>
                 </div>
                 <SubmitBtn/>
-            </div> */}
+            </div>
         </div>
     );
 };

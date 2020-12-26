@@ -1,15 +1,29 @@
 import React from "react";
+import * as Yup from "yup";
+import { useFormik } from "formik"
+
 
 export const initialValues = () => {
-    let userName= ""
-    let weight= ""
+    let userName = ""
+    let userWeight = ""
+    let userHeight = ""
+    let userAge = ""
 }
+export const validationSchema = Yup.object({
+    userName: Yup.string()
+        .min(2, "Too Short!")
+        .max(8, "Too Long!")
+        .required("Required!"),
 
-export const validate = values => {
-    let error={}
-    if (!values.name) {
-        error.name = "Required"
-        console.log(error.name)
-    }
-    return error;
+    userAge: Yup.string()
+        .max(3, "Invalid Characters")
+        .matches(/\d/, "Invalid Characters"),
+
+    userWeight: Yup.string()
+        .max(3, "Invalid Characters")
+        .matches(/\d/, "Invalid Characters"),
+});
+
+export const onSubmit = values => {
+    console.log(values)
 }
