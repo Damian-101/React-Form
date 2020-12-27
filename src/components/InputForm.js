@@ -16,7 +16,6 @@ const Form01 =(props) => {
                 <input type="text"
                     name={props.name}
                     onChange={props.changeHandler}
-                    id="Input" 
                     autoComplete="off"
                     value={props.value}
                     className="input"

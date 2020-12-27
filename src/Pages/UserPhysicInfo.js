@@ -14,12 +14,6 @@ const formik = useFormik({
         onSubmit
     })
 let handleSubmit = formik.handleSubmit
-//  const handleSubmit = (values) => {
-//     //  schema.isValid(undefined,function(valid){
-//     //      valid;
-//     //  })
-//     console.log(formik.values)
-// }
 console.log(formik.errors)
     return (
         <div className="page-wraper">
