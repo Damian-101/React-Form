@@ -1,33 +1,37 @@
 @import "./common.scss";
 .UserPhysicInfo {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    padding-top: 9.5rem;
-    header {
+    padding-top: 7.5rem;
+    align-items: center;
+    .content {
         display: flex;
-        align-items: flex-start;
         flex-direction: column;
-        color: #fff;
-        p {
-            padding-top: 1rem;
+        align-items: flex-start;
+        header {
+            color: #fff;
+            p {
+                padding-top: 1rem;
+            }
         }
-    }
-    footer {
-        width: 100%;
-        display: flex;
-        padding-top: 1.5rem;
-        ul {
-            list-style-type: none;
-            li {
-                padding: 2rem 0;
-                p {
-                    color: #fff;
-                }
-                div:first-child {
-                    font-weight: $SegoeSemiBold;
-                }
-                div {
-                    width: 100%;
-                    padding-top: 0.6rem;
+        footer {
+            width: 100%;
+            padding-top: 1.5rem;
+            ul {
+                list-style-type: none;
+                li {
+                    padding: 2rem 0;
+                    p {
+                        color: #fff;
+                    }
+                    div:first-child {
+                        font-weight: $SegoeSemiBold;
+                    }
+                    div {
+                        width: 100%;
+                        padding-top: 0.6rem;
+                    }
                 }
             }
         }

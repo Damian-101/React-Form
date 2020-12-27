@@ -19,6 +19,7 @@ console.log(formik.errors)
         <div className="page-wraper">
             <div className="container">
                 <div className="UserPhysicInfo">
+                    <div className="content">
                     <header>
                         <h1>Hello User</h1>
                         <p>Please fill the form</p>
@@ -59,6 +60,7 @@ console.log(formik.errors)
                             </li>
                         </ul>
                     </footer>
+                    </div>
                 </div>
                 <SubmitBtn handleSubmit={handleSubmit}/>
             </div>
