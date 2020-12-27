@@ -8,23 +8,15 @@ import Form01 from "../components/InputForm";
 import React, {useState} from "react";
 import {useHistory} from "react-router-dom";
 import {Formik,Form,Field,useFormik} from "formik";
-import {SignupSchema} from "../components/SignupSchema";
-import {initialValues,validationSchema} from "../components/UserData";
-
+import {initialValues,validationSchema1,onSubmit} from "../components/UserData";
 const UserNamePage =() => {
-    const history = useHistory();
-
     const formik = useFormik({
         initialValues,
-        validationSchema,
+        validationSchema1,
+        onSubmit
     })
 
-
-
-    const handleSubmit = () => {
-        console.log("clicked")
-        history.push("/UserPhysicInfo");
-    }
+    let handleSubmit = formik.handleSubmit
         return (
             <div className="page-wraper">
                     <div className="container">

@@ -3,7 +3,7 @@ import "../scss/UserPhysicInfo.scss";
 import Form01 from "../components/InputForm";
 import SubmitBtn from "../components/SubmitBtn";
 import React from "react";
-import {initialValues,validationSchema} from "../components/UserData"
+import {initialValues,validationSchema,onSubmit} from "../components/UserData"
 import {useFormik} from "formik"
 
 const UserPhysicInfo = () =>{
@@ -11,10 +11,15 @@ const UserPhysicInfo = () =>{
 const formik = useFormik({
         initialValues,
         validationSchema,
+        onSubmit
     })
- const handleSubmit = (values) => {
-    console.log(formik.values)
-}
+let handleSubmit = formik.handleSubmit
+//  const handleSubmit = (values) => {
+//     //  schema.isValid(undefined,function(valid){
+//     //      valid;
+//     //  })
+//     console.log(formik.values)
+// }
 console.log(formik.errors)
     return (
         <div className="page-wraper">
@@ -55,6 +60,7 @@ console.log(formik.errors)
                                 </div>
                                 <div>
                                     <Form01 name="userHeight" values={formik.values.userHeight} onBlur={formik.handleBlur} changeHandler={formik.handleChange} placeholder="Ex: 6.5 ft"/>
+                                    {formik.touched.userHeight && formik.errors.userHeight ? <div className="error">{formik.errors.userHeight}</div> :null}
                                 </div>
                             </li>
                         </ul>

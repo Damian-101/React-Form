@@ -10,15 +10,9 @@ import { Formik,useFormik } from "formik";
 import {initialValues,validationSchema,onSubmit} from "./UserData";
  
 const Form01 =(props) => {
-
-    const formik = useFormik({
-        initialValues,
-        validationSchema,
-    })
     return(
         <div className="UserForm">
             <div className="InputBar">
-                <form onSubmit={formik.handleSubmit}>
                 <input type="text"
                     name={props.name}
                     onChange={props.changeHandler}
@@ -30,7 +24,6 @@ const Form01 =(props) => {
                     placeholder={props.placeholder}
                     onBlur = {props.handleBlur}
                 />
-                </form>
             </div>
         </div>
     );

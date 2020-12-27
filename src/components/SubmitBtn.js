@@ -8,10 +8,10 @@ import { useFormik } from "formik"
 import {initialValues,handleSubmit} from "./UserData";
 
  const SubmitBtn = (props) => {
-
-    const formik = useFormik({
-        initialValues,
-    })
+    //  const handles = () => {
+    //     props.pageSubmit();
+    //     props.handleSubmit();
+    //  }
     let btnValidation = {
         opacity: "10%"
     }

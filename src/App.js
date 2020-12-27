@@ -6,7 +6,6 @@ import UserPhysicInfo from "./Pages/UserPhysicInfo";
 import React from "react";
 import {UserDataProvider} from "./components/UserData";
 import MainPage from "./Pages/MainPage";
-import {Form01} from "./components/InputForm";
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,7 +26,7 @@ function App() {
 
         </Link>
           <Switch>
-            <Route exact path="/" component={UserNamePage}/>
+            <Route exact path="/UserNamePage" component={UserNamePage}/>
             <Route path="/UserPhysicInfo" component={UserPhysicInfo}/>
             <Route path="/MainPage" component={MainPage}/>
           </Switch>
