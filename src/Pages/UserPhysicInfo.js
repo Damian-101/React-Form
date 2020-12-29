@@ -5,8 +5,10 @@ import SubmitBtn from "../components/SubmitBtn";
 import React from "react";
 import {initialValues,validationSchema,onSubmit} from "../components/UserData"
 import {useFormik} from "formik"
+import {useHistory} from "react-router-dom";
 
 const UserPhysicInfo = () =>{
+const history = useHistory();
 
 const formik = useFormik({
         initialValues,
@@ -14,7 +16,16 @@ const formik = useFormik({
         onSubmit
     })
 let handleSubmit = formik.handleSubmit
-console.log(formik.errors)
+    // change page 
+    const isValid = formik.isValid;
+    const touched = formik.touched.userAge;
+    
+handleSubmit = () => {
+    if (touched===true&&isValid===true){
+        history.push("/MainPage")
+    }
+}
+console.log(touched)
     return (
         <div className="page-wraper">
             <div className="container">
